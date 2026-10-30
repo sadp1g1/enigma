@@ -9,7 +9,8 @@ public class AboutEnigma extends JFrame {
         super("About Enigma");
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         add(new EnigmaCanvas());
-        setSize(1000, 600);
+        setSize(800, 600);
+        setResizable(false);
         setLocationRelativeTo(null);
     }
 
@@ -46,11 +47,12 @@ public class AboutEnigma extends JFrame {
         };
 
         public void paint(Graphics g) {
+            g.setFont(new Font("Serif",Font.PLAIN, 18));
             for (int i = 0; i < lines.length; i++)
-                g.drawString(lines[i], 600, 60 + i * 20);
+                g.drawString(lines[i], 400, 60 + i * 20);
 
             int x = 70, y = 110, w = 250, h = 350;
-            g.setColor(new Color(250, 243, 230));
+            g.setColor(new Color(88, 60, 6));
             g.fillRect(x - 10, y - 10, w + 20, h + 20); //ramka
             g.drawImage(img, x, y, w, h, this);
         }

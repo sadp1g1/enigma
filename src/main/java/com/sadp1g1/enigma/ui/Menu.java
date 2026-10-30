@@ -43,4 +43,3 @@ public class Menu extends JFrame{
         add(bottom, BorderLayout.SOUTH);
     }
 }
-
